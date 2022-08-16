@@ -1,0 +1,22 @@
+
+<div class="mx-auto max-w-max">
+    <a href="/add-category" class="bg-red-500 text-white py-[6px] px-[10px] rounded-full mx-auto max-w-max"><i class="fa-solid fa-plus"></i></a>
+</div>
+
+<div class="mx-auto max-w-max px-8 pt-8 pb-8 shadow-sm shadow-slate-500 rounded-md mt-8 text-left">
+
+    <table>
+        <thead class="bg-[#028476] text-white uppercase">
+            <th class="p-4">Categories</th>
+            <th class="p-4">Action</th>
+        </thead>
+        <tbody *ngFor="let category of categories">
+            <td class="py-2 px-4">{{category.name}}</td>
+            <td class="py-2 px-4 flex gap-4">
+                <a [routerLink]="['/edit-category', category._id]" class="bg-green-600 py-[5px] px-[9px] text-white rounded-full"><i class="fa-solid fa-pencil"></i></a>
+                <button (click)="deleteCategory(category._id!)" class="bg-black py-[5px] px-[11.5px] text-white rounded-full"><i class="fa-solid fa-xmark"></i></button>
+            </td>
+        </tbody>
+    </table>
+</div>
+

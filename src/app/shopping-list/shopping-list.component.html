@@ -1,0 +1,34 @@
+
+<div class="mx-auto max-w-max">
+    <a href="/add-item" class="bg-red-500 text-white py-[6px] px-[10px] rounded-full mx-auto max-w-max"><i class="fa-solid fa-plus"></i></a>
+</div>
+
+    <div class="mx-auto max-w-max px-8 pt-8 pb-8 shadow-sm shadow-slate-500 rounded-md mt-8 text-left">
+        <table>
+            <thead class="bg-[#028476] text-white uppercase">
+                <th class="p-4">Category</th>
+                <th class="p-4">Name</th>
+                <th class="p-4">Price</th>
+                <th class="p-4">Qty.</th>
+                <th class="p-4">Sub total</th>
+                <th class="p-4">Action</th>
+            </thead>
+            <tbody *ngFor="let item of items" class="">
+                <td class="py-2 px-4 text-orange-800 uppercase">{{item.category.name}}</td>
+                <td class="py-2 px-4">{{item.item_name}}</td>
+                <td class="py-2 px-4">${{item.price}}</td>
+                <td class="py-2 px-4">{{item.quantity}}</td>
+                <td class="py-2 px-4 text-green-600 underline">${{item.price * item.quantity}}</td>
+                <td class="flex gap-4 p-4">
+                    <a [routerLink]="['/edit-item', item._id]" class="bg-green-600 py-[5px] px-[9px] text-white rounded-full"><i class="fa-solid fa-pencil"></i></a>
+                    <button (click)="deleteItem(item._id!)" class="bg-black py-[5px] px-[11.5px] text-white rounded-full"><i class="fa-solid fa-xmark"></i></button>
+                </td>
+            </tbody>
+            <p class="text-green-600 uppercase underline underline-offset-2">Grand total: ${{total}}</p>
+        </table>
+    </div>
+
+
+
+
+

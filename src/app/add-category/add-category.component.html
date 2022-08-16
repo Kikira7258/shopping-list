@@ -1,0 +1,13 @@
+
+<div class="max-w-max mx-auto shadow-md p-8 shadow-[#028476] rounded-md">
+    
+    <form #form="ngForm" (submit)="form.valid && handleSubmit()">
+        <h1 class="text-[#028476] text-center uppercase mb-6">Add New Category</h1>
+        <div class="mb-4">
+            <label for="category" class="text-xs text-slate-600">Category</label><br>
+            <input type="text" id="category" name="name" [(ngModel)]="data.name" required placeholder="Enter Category Name" class="border-2 border-[#028476] rounded-md px-2">
+        </div>
+
+        <button type="submit" class="bg-[#028476] text-white rounded-md p-2 mt-2">Add Category</button>
+    </form>
+</div>

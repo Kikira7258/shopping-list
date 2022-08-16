@@ -1,0 +1,30 @@
+<div class="max-w-max mx-auto shadow-md p-8 shadow-[#028476] rounded-md">
+    <form (submit)="onSubmit()">
+        <h1 class="text-[#028476] text-center uppercase mb-6">Add New Item</h1>
+
+        <div class="mb-4">
+            <label for="" class="text-xs text-slate-600">Item Name</label><br>
+            <input type="text" name="item_name" [(ngModel)]="data.item_name" placeholder="Enter Item Name" class="border-2 border-[#028476] rounded-md px-2">
+        </div>
+
+        <div class="mb-4">
+            <label for="" class="text-xs text-slate-600">Category</label><br>
+            <select name="category" id="" [(ngModel)]="data.category" class="border-2 border-[#028476] rounded-md px- w-full">
+                <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="" class="text-xs text-slate-600">Price</label><br>
+            <input type="number" name="price" [(ngModel)]="data.price" placeholder="Enter Price" class="border-2 border-[#028476] rounded-md px-2">
+        </div>
+        
+        <div class="mb-4">
+            <label for="" class="text-xs text-slate-600">Quantity</label><br>
+            <input type="number" name="quantity" [(ngModel)]="data.quantity" placeholder="Enter Quantity" class="border-2 border-[#028476] rounded-md px-2">
+        </div>
+
+        <button type="submit" class="bg-[#028476] text-white rounded-md p-2 mt-2">Add Item</button>
+    </form>
+</div>
+
