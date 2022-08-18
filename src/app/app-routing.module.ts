@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddShoppingComponent } from './add-shopping/add-shopping.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-// import { AddCategoryComponent } from './add-category/add-category.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
